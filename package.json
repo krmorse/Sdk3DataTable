@@ -1,0 +1,17 @@
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "rally": {
+        "server": "https://rally1.rallydev.com"
+    },
+    "devDependencies": {
+        "create-rally-app": "1.0.0",
+        "prop-types": "^15.6.0",
+        "rally-sdk": "3.0.0",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2",
+        "react-immutable-proptypes": "^2.1.0"
+    }
+}
