@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
     return <div className="app">
-      <LoadingMask />
+        { this.renderGrid() }
     </div>;
   }
 

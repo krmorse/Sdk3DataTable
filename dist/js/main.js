@@ -176,7 +176,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'app' },
-        _react2.default.createElement(LoadingMask, null)
+        this.renderGrid()
       );
     }
   }, {
