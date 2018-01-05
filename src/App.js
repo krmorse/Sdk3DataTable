@@ -24,7 +24,7 @@ class App extends Component {
       'Name',
       'Blocked',
       'PlanEstimate',
-      'Owner',
+      'Owner'
     ]),
     selectedItems: Immutable.Map(),
     sortByColumnName: 'DragAndDropRank',
