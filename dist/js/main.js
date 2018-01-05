@@ -133,8 +133,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var DataTableWithToolbar = _rallySdk.Components.DataTableWithToolbar;
-// const { Editor, Editors: { KIND }, DataTable } = Components;
-
 var _Components$Data = _rallySdk.Components.Data,
     withSchema = _Components$Data.withSchema,
     fromScope = _Components$Data.fromScope;
@@ -178,36 +176,9 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'app' },
-        _react2.default.createElement(
-          'div',
-          { className: 'header' },
-          this.renderGrid()
-        )
+        _react2.default.createElement(LoadingMask, null)
       );
     }
-
-    // renderSeverityFilter() {
-    //   const { context } = this.props;
-    //   const { severity } = this.state;
-
-    //   const fieldLabelProps = {
-    //     text: 'Filter by Severity:'
-    //   };
-    //   const editorProps = {
-    //     kind: KIND.QUICK_FILTER,
-    //     type: 'Defect',
-    //     attribute: 'Severity',
-    //     scope: context.get('scope'),
-    //     onChange: this.onChange,
-    //     value: severity
-    //   };
-
-    //   return <div className="dropdown">
-    //     <FieldLabel { ...fieldLabelProps } />
-    //     <Editor { ...editorProps } />
-    //   </div>;
-    // }
-
   }, {
     key: 'renderGrid',
     value: function renderGrid() {
@@ -246,13 +217,6 @@ var App = function (_Component) {
         _react2.default.createElement(DataTableWithToolbar, dataTableProps)
       );
     }
-
-    // onChange = (value) => {
-    //   this.setState({
-    //     severity: value
-    //   });
-    // }
-
   }]);
 
   return App;

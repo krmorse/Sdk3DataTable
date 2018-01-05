@@ -5,7 +5,6 @@ import { Components, View } from 'rally-sdk';
 import Immutable from 'immutable';
 
 const { DataTableWithToolbar } = Components;
-// const { Editor, Editors: { KIND }, DataTable } = Components;
 const { Data: { withSchema, fromScope } } = Components;
 const { FieldLabel, LoadingMask } = View;
 
@@ -34,34 +33,9 @@ class App extends Component {
 
   render() {
     return <div className="app">
-      <div className="header">
-        {/* {this.renderSeverityFilter()} */}
-        {this.renderGrid()}
-      </div>
+      <LoadingMask />
     </div>;
   }
-
-  // renderSeverityFilter() {
-  //   const { context } = this.props;
-  //   const { severity } = this.state;
-
-  //   const fieldLabelProps = {
-  //     text: 'Filter by Severity:'
-  //   };
-  //   const editorProps = {
-  //     kind: KIND.QUICK_FILTER,
-  //     type: 'Defect',
-  //     attribute: 'Severity',
-  //     scope: context.get('scope'),
-  //     onChange: this.onChange,
-  //     value: severity
-  //   };
-
-  //   return <div className="dropdown">
-  //     <FieldLabel { ...fieldLabelProps } />
-  //     <Editor { ...editorProps } />
-  //   </div>;
-  // }
 
   onColumnChange = (columnNames) => {
     this.setState({ columnNames });
@@ -105,12 +79,6 @@ class App extends Component {
       <DataTableWithToolbar { ...dataTableProps } />
     </div>;
   }
-
-  // onChange = (value) => {
-  //   this.setState({
-  //     severity: value
-  //   });
-  // }
 }
 
 export default withSchema(App);
